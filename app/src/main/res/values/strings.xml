@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">教学助手</string>
+    <string name="label_name"> 姓名 ：</string>
+    <string name="label_class"> 班级 ：</string>
+    <string name="title_app">教学助手</string>
+    <string name="btn_call_roll">课堂点名</string>
+    <string name="btn_add_student">添加学生</string>
+    <string name="btn_del_student">删除学生</string>
+    <string name="btn_update_student">修改学生信息</string>
+    <string name="btn_score_student">平时成绩</string>
+    <string name="arrive">出勤</string>
+    <string name="late">迟到</string>
+    <string name="skip">逃课</string>
+    <string name="early">早退</string>
+    <string name="off">请假</string>
+    <string name="title_call_role">课堂点名</string>
+    <string name="post">提交</string>
+    <string name="update">修改</string>
+    <string name="title_detail">详细信息</string>
+    <string name="label_sex">性别 ：</string>
+    <string name="label_sno">学号 ：</string>
+    <string name="label_num_late">迟到次数 ：</string>
+    <string name="label_num_off">请假次数 ：</string>
+    <string name="label_num_early">早退次数 ：</string>
+    <string name="label_num_skip">旷课次数 ：</string>
+    <string name="btn_show_student">查看所有</string>
+    <string name="creat_sql_student">create table student_info(
+                sno varchar(20) primary key not null,
+                sname varchar(20) not null,
+                ssex integer not null,
+                num_late integer not null,
+                num_early integer not null,
+                num_off integer not null,
+                num_skip integer not null,
+                score integer not null,
+                photo blob not null,
+                sclass varchar(20) not null)</string>
+    <string name="creat_sql_record">create table record_info(
+                sno varchar(20) not null,
+                sname varchar(20) not null,
+                date varchar(20) not null,
+                type varchar(10) not null)</string>
+    
+    <string name="creat_sql_reduce_list">create table reduce_info(id integer primary key not null,
+                skip integer not null,
+                late integer not null,
+                early integer not null,
+                off integer not null)</string>
+     <string name="init_sql_reduce_list">insert into reduce_info(id ,skip ,late ,early ,off)
+                                         values(1,0,0,0,0)  </string>
+    <string name="update_sql_reduce_list">update reduce_info set late=?,early=?,off=?,skip=? where id=1</string>
+
+    <string name="sql_query_call_role">select sno,sname,sclass from student_info</string>
+
+
+    <string name="delete_student_from_db">delete from student_info where sno=?</string>
+    <string name="delete_record_from_db">delete from record_info where sno=?</string>
+
+    <string name="select_photo">select photo from student_info where sno=?</string>
+
+    <string name="sql_create_class">create table classes(class varchar(20) not null)</string>
+
+    <string name="sql_add_class">insert into classes(class) values (\'</string>
+
+
+    <string name="sql_del_class">delete from classes where class= \'</string>
+
+    <string name="btn_save">保存</string>
+
+    <string name="title_list_all">学生信息</string>
+
+    <string name="database_name_info">student_info</string>
+    <string name="database_name_record">record_info</string>
+    
+    <string name="export">导出数据</string>
+    <string name="score_info">成绩信息</string>
+
+    <string name="update_socre"> update student_info set score=100-num_skip*(select skip from reduce_info)
+       -num_late*(select late from reduce_info)-num_early*(select early from reduce_info)
+       -num_off*(select off from reduce_info)
+    </string>
+
+
+</resources>

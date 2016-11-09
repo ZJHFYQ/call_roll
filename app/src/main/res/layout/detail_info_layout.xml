@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--自定义标题栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_txt_back"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:text="back"
+            android:textSize="25dp"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="btn_txt_back_click"
+            />
+
+        <TextView
+            android:id="@+id/title_call_role"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="50dp"
+            android:text="@string/title_detail"
+            android:gravity="center_vertical"
+            android:textSize="25dp"
+            android:background="@color/colorPrimary"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_height="225dp"
+            android:id="@+id/iv_detail_photo"
+            android:layout_width="0dp"
+            android:layout_weight="1.5" />
+
+        <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="225dp"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/label_name"/>
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_sno"/>
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_class"/>
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_sex"/>
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_num_skip"/>
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_num_late"/>
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_num_off"/>
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_num_early"/>
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="平时成绩 ："/>
+                </LinearLayout>
+
+        <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="225dp"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/txt_detail_name"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/txt_detail_sno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/txt_detail_calss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/txt_detail_sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/txt_detail_skip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/txt_detail_late"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/txt_detail_off"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/txt_detail_early"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:id="@+id/txt_detail_score"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改该生信息"
+            android:onClick="btn_update_click"/>
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除该生信息"
+            android:onClick="btn_delete_click"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zjh.call_roll.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_school"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+
+            <Button
+                android:id="@+id/btn_call_roll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/btn_call_roll"
+                android:onClick="call_role"/>
+
+            <Button
+                android:id="@+id/btn_show_student"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/btn_show_student"
+                android:onClick="showStudent"/>
+
+            <Button
+                android:id="@+id/btn_add_student"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/btn_add_student"
+                android:onClick="addStudent"/>
+
+            <Button
+                android:id="@+id/btn_export"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/export"
+                android:onClick="btn_export_clicked"/>
+            <Button
+                android:id="@+id/btn_reduce_score_list"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="减分规则"
+                android:onClick="btn_reduce_score_list_clicked"/>
+            <Button
+                android:id="@+id/btn_class_set"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="设置班级"
+                android:onClick="btn_class_set_clicked"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

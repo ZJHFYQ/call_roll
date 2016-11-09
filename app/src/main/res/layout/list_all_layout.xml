@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/title_call_role"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/title_list_all"
+            android:gravity="center_vertical"
+            android:textSize="25dp"
+            android:background="@color/colorPrimary" />
+    <Spinner
+        android:id="@+id/spinner_class_list_all"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textAlignment="center">
+    </Spinner>
+
+    <ListView
+        android:id="@+id/lv_list_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+</LinearLayout>
